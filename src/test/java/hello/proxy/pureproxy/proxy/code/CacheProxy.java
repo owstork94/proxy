@@ -16,9 +16,7 @@ public class CacheProxy implements Subject{
     public String Operation() {
 
         if(cachvalue == null){
-            target
-                    .e
-            return
+            return target.operation();
         }
         return cachvalue;
     }
