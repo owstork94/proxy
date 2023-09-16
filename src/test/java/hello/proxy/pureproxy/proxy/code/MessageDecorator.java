@@ -13,6 +13,7 @@ public class MessageDecorator implements Component{
 
     @Override
     public String operation() {
+        log.info("MessageDecorator 실행");
         String beforMsg = component.operation();
 //        log.info("befor : {}",beforMsg);
         String afterMsg = "****"+beforMsg+"****";
