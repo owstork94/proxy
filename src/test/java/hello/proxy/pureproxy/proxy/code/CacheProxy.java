@@ -18,6 +18,7 @@ public class CacheProxy implements Subject{
     public String operation() {
         log.info("프록시 호출");
         if(cachvalue == null){
+            log.info("프록시x");
             cachvalue = target.operation();
         }
         return cachvalue;
