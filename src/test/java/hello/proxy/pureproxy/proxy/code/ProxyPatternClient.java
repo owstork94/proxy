@@ -10,6 +10,6 @@ public class ProxyPatternClient {
     }
 
     public void excute(){
-        subject.Operation();
+        subject.operation();
     }
 }

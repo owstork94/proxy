@@ -1,5 +1,8 @@
 package hello.proxy.pureproxy.proxy.code;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class CacheProxy implements Subject{
 
 //    케시 없으면 원본 실행 후 캐시에 넣어서 반환
@@ -11,12 +14,11 @@ public class CacheProxy implements Subject{
         this.target = target;
     }
 
-
     @Override
-    public String Operation() {
-
+    public String operation() {
+        log.info("프록시 호출");
         if(cachvalue == null){
-            return target.operation();
+            cachvalue = target.operation();
         }
         return cachvalue;
     }
