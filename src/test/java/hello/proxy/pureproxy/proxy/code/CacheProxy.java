@@ -21,6 +21,7 @@ public class CacheProxy implements Subject{
             log.info("프록시x");
             cachvalue = target.operation();
         }
+
         return cachvalue;
     }
 }
