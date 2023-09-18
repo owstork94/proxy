@@ -20,7 +20,7 @@ public class TimeDecorator implements Component{
         long endTime = System.currentTimeMillis();
         long resultTime = endTime - startTime;
 
-        log.info("MdssageDecorator 종료 result time : {}",resultTime);
+        log.info("TimeDecorator 종료 result time : {}",resultTime);
         return result;
     }
 }
