@@ -10,7 +10,7 @@ public class ReflectionTest {
     void reflection0(){
         Hello target = new Hello();
 
-        //공통로직 1 시작
+        //공통로직 1 시작.
         log.info("start");
         String result1 = target.callA();
         log.info("result -> {}",result1);
