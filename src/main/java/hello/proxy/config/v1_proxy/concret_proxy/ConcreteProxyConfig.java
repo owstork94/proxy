@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ConcreteProxyConfig {
-
+//
     @Bean
     public OrderControllerV2 orderController(LogTrace logTrace){
         OrderControllerV2 controller = new OrderControllerV2(orderServiceV2(logTrace));
