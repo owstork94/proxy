@@ -41,7 +41,30 @@ public class ReflectionTest {
         log.info("result2,{}",result2);
     }
 
-   static class Hello {
+    @Test
+    void feflection2() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Class reflectHello = Class.forName("hello.proxy.jdkdinamic.ReflectionTest$Hello");
+
+        Method methodA = reflectHello.getMethod("callA");
+        Method methodB = reflectHello.getMethod("callB");
+        Hello target = new Hello();
+
+        dinamicCall(methodA,target);
+        dinamicCall(methodB,target);
+
+
+    }
+
+    private void dinamicCall(Method method, Hello target) throws InvocationTargetException, IllegalAccessException {
+        log.info("start");
+        Object result = method.invoke(target);
+        log.info("warn");
+
+
+    }
+
+
+    static class Hello {
 
         public String callA(){
             log.info("callA.start");
