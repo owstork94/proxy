@@ -1,8 +1,6 @@
 package hello.proxy.jdkdinamic;
 
-import hello.proxy.jdkdinamic.code.AImplement;
-import hello.proxy.jdkdinamic.code.Ainterface;
-import hello.proxy.jdkdinamic.code.TimeInvocationHandler;
+import hello.proxy.jdkdinamic.code.*;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
@@ -28,5 +26,17 @@ public class JdkDinamicProxyTest {
         aProxy.call();
         log.info("targetClass={}",target.getClass());
         log.info("proxyClass={}",aProxy.getClass());
+    }
+
+    @Test
+    void dinamicB(){
+        Binterface target = new Bimplement();
+
+        TimeInvocationHandler handler = new TimeInvocationHandler(target);
+        Binterface bProxy = (Binterface) Proxy.newProxyInstance(Binterface.class.getClassLoader(), new Class[]{Binterface.class},handler);
+
+        bProxy.call();
+        log.info("targetClass={}",target.getClass());
+        log.info("proxyClass={}",bProxy.getClass());
     }
 }
