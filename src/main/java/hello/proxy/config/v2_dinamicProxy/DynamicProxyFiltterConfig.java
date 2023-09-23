@@ -28,6 +28,7 @@ private static final String[] PATTERNS = {"request*","order*","save*"};
         OrderControllerV1 proxy = (OrderControllerV1)
                 Proxy.newProxyInstance(OrderControllerV1.class.getClassLoader(),
                         new Class[]{OrderControllerV1.class},
+                        //생성자 대로 ... 생성 되게 강제 하여 새로운 핸들러 생성 하니PATTERS 추가 하도록 강제됨.
                         new LogTraceFiltterHandler(orderControllerV1,logTrace,PATTERNS));
 
         //대신 프록시 호출
