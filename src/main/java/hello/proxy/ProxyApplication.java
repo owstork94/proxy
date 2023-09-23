@@ -1,9 +1,5 @@
 package hello.proxy;
 
-import hello.proxy.config.AppV1Config;
-import hello.proxy.config.AppV2Config;
-import hello.proxy.config.v1_proxy.concret_proxy.ConcreteProxyConfig;
-import hello.proxy.config.v1_proxy.interface_proxy.InterfaceProxyConfig;
 import hello.proxy.config.v2_dinamicProxy.DynamicProxyBasicConfig;
 import hello.proxy.trace.logtrace.LogTrace;
 import hello.proxy.trace.logtrace.ThreadLocalLogTrace;
