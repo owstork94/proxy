@@ -71,4 +71,11 @@ public class ThreadLocalLogTrace implements LogTrace {
         }
         return sb.toString();
     }
+
+    public static void main(String[] args) {
+        TraceStatus traceStatus = null;
+        LogTrace logTrace = new ThreadLocalLogTrace();
+        traceStatus = logTrace.begin("ctrl.request");
+        logTrace.end(traceStatus);
+    }
 }

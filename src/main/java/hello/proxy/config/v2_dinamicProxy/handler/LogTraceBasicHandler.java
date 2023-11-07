@@ -5,6 +5,7 @@ import hello.proxy.trace.logtrace.LogTrace;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
+import java.util.stream.Stream;
 
 public class LogTraceBasicHandler implements InvocationHandler {
 
@@ -15,6 +16,8 @@ public class LogTraceBasicHandler implements InvocationHandler {
         this.target = target;
         this.logTrace = logTrace;
     }
+
+
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
