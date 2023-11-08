@@ -2,10 +2,17 @@ package hello.proxy.trace.logtrace;
 
 public class JsonParser04 {
     public static void main(String[] args) {
+        //file 변환
+        //fkle 경로
+        String filePath = "C:\\test02.txt";
+
+        //JSON key 파싱
+
+        //JSON value 파싱
 
     }
 
-    public static void jsonParser(){
+    private static void parseJOSN(){
 
     }
 }
